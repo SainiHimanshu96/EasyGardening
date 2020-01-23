@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <EditText
+        android:id="@+id/ev_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:hint="Name Of Plant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/ev_dateOfCreation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:hint="Date Of Creation"
+        app:layout_constraintEnd_toEndOf="@+id/ev_name"
+        app:layout_constraintStart_toStartOf="@+id/ev_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_selectPlant" />
+
+    <EditText
+        android:id="@+id/ev_optimalTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:hint="Optimal time of  planting"
+        app:layout_constraintEnd_toEndOf="@+id/ev_dateOfCreation"
+        app:layout_constraintStart_toStartOf="@+id/ev_dateOfCreation"
+        app:layout_constraintTop_toBottomOf="@+id/ev_dateOfCreation" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/sp_typeOfPlant"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_selectPlant"
+        app:layout_constraintStart_toEndOf="@+id/tv_selectPlant"
+        app:layout_constraintTop_toTopOf="@+id/tv_selectPlant" />
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_background"
+        android:padding="4dp"
+        android:text="Add Plant"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/ev_optimalTime"
+        app:layout_constraintStart_toStartOf="@+id/ev_optimalTime" />
+
+    <TextView
+        android:id="@+id/tv_selectPlant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_marginTop="24dp"
+        android:text=" Select Plant Type"
+        app:layout_constraintStart_toStartOf="@+id/ev_name"
+        app:layout_constraintTop_toBottomOf="@+id/ev_name" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
